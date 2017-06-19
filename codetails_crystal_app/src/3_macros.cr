@@ -4,5 +4,6 @@ macro define_method(name, content)
   end
 end
 
-define_method codetails, "fenomenos"
+define_method codetails, ARGV[0]
+
 puts codetails
