@@ -18,16 +18,16 @@ end
 
 
 data = Array( String ).new
-i = 0
-total_time = 0
+total_time = 0.0
 
-[1000, 2000, 4000, 8000, 16000].each do |item|
+[1_000, 2_000, 4_000, 8_000, 16_000].each do |item|
   data_start = Time.now
   bubble_sort(Array.new(item) { rand(1...999) })
   data_end = Time.now
-  total_time = total_time + (data_end - data_start)
-  data << "[#{item}] Tardé: #{(total_time)}"
-  i +=1
+
+  partial_time = (data_end - data_start).to_f
+  total_time = total_time + partial_time
+  data << "[#{item}] Tardé: #{(partial_time)}"
 end
 
 data.each do |item|
