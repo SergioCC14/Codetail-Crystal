@@ -1,0 +1,18 @@
+name: codetails_crystal_app
+version: 0.1.0
+
+authors:
+  - Sergio Canis <sergio.canis@outlook.com>
+
+targets:
+  codetails_crystal_app:
+    main: src/codetails_crystal_app.cr
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+    branch: master
+
+crystal: 0.22.0
+
+license: MIT
